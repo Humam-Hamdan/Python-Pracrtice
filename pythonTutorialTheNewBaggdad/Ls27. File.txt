@@ -1,0 +1,7 @@
+Hello
+Name = Hud
+Name = Nad
+Name = Serf
+Name = Sans
+Name = Ari
+Name = Mari

@@ -1,0 +1,32 @@
+أختر اللغة التي تناسبك، ثم أكتب برنامج يولد رقم من 1 إلى 100، واطبع الرقم. ولكن إذا كان الرقم أحد مضاعفات الثلاثة فاطبع "fizz" عوضًا عن الرقم، وإن كان الرقم أحد مضاعفات الخمسة فاطبع buzz، أما إن كان الرقم مضاعف لكلا الرقمين فاطبع fizzbuzz
+
+M_K:
+
+a = 5, b = 3, c = 100, e = "fizz", f = "buzz"
+for j in range(c):
+  if j % a == 0 and j % b == 0:
+    print(e,f)
+  elif j % b == 0:
+    print(e)
+  elif j % a == 0:
+    print(f)
+	
+TGB:
+
+buffer = []
+fizzy_map = [
+  [3, "fizz"],
+  [5, "buzz"],
+  [7, "duzz"],
+]
+def buzz_to(n):
+  global buffer
+  for i in range(n):
+    for m in fizzy_map:
+      if i % m[0] == 0:
+        buffer.append(m[1])
+
+    print(i, ''.join(buffer))
+    buffer = []
+
+buzz_to(100)
